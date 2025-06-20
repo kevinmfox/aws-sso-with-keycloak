@@ -10,6 +10,7 @@ This repo gives a rundown on how to deploy a Keycloak server into an AWS account
 - You have an active AWS account and are relatively familiar with how to use it
 - You have some familiarity with Terraform and how to run plans
 - Your Terraform setup can _reach_ your AWS environment programmatically
+- I only tested all of this on Ubuntu 24.04
 
 ## Assumptions
 The Terraform script assumes you have a Route53 zone setup and at your disposal. If you don't you'll need to modify the Terraform script to not use Route53, and you'll most likely have to modify the ```cloud-init-keycloak.sh``` script to not automatically get an SSL certificate (as that needs a DNS name in place). Just create a DNS record wherever you want to, point it at the server, and run the certbot command manually on the system afterwards.
@@ -46,7 +47,7 @@ Log into your AWS account, and head on over to "IAM Identity Center".
 
 If you haven't yet enabled Identity Center, it will look like this:
 
-<img src="images/image01.jpg" height=25% width=25% ></a>
+<img src="images/image01.jpg" ></a>
 
  There are some things to consider when enabling Identity Center. Nothing _earth shattering_, but it does shift a few things around: https://docs.aws.amazon.com/singlesignon/latest/userguide/identity-center-prerequisites.html
 
