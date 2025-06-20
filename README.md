@@ -5,6 +5,8 @@ Additionally, I work/play a lot with AWS, and didn't find a lot of documentation
 
 This repo gives a rundown on how to deploy a Keycloak server into an AWS account and will also cover how to configure the AWS Identity Center side as well as the Keycloak side to allow SSO into AWS Console for your Keycloak users.
 
+The deployment of Keycloak is done via Terraform and a shell script through user data (```cloud-init-keycloak.sh```). The AWS IAM Identity Center and Keycloak setup afterwards is manual (but lightweight) - it could certainly be automated, but that wasn't the goal of this particular exercise :)
+
 ## Requirements
 
 - You have an active AWS account and are relatively familiar with how to use it
