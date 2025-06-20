@@ -40,7 +40,7 @@ If you're a Chrome user and you ran certbot in staging mode, you'll need to use 
 
 Once the site's up, log in using ```admin``` and ```password``` (assuming you didn't modify that).
 
-## AWS Identity Center Setup & User Creation
+## AWS Identity Center Setup
 
 Log into your AWS account, and head on over to "IAM Identity Center".
 
@@ -53,4 +53,15 @@ If you haven't yet enabled Identity Center, it will look like this:
  Assuming Identity Center is enabled, head on over to "Settings" and select "Change identity source" under "Actions":
 
  <img src="images/image02.jpg" ></a>
+
+Select "External identity provider", and click "Next"
+
+Download the metadata file locally (e.g. ```aws-metadata.xml```)
+
+## Keycloak IdP Setup
+
+Back on over to your Keycloak instance, select "Clients" on the left menu, and select "Import client":
+
+<img src="images/image03.jpg" ></a>
+
 
