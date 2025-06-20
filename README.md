@@ -52,6 +52,5 @@ If you haven't yet enabled Identity Center, it will look like this:
 
  Assuming Identity Center is enabled, head on over to "Settings" and select "Change identity source" under "Actions":
 
- <img src="images/image02.jpg" height=25% width=25% ></a>
+ <img src="images/image02.jpg" ></a>
 
- 
