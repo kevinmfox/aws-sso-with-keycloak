@@ -21,6 +21,8 @@ You can certainly run Keycloak without an SSL cert, but that requires some other
 ## Warnings
 I use a password of 'password' everywhere for this. Obviously if you're going to do anyting _real_ with this environment, review everything and make it _production ready_.
 
+Additionally, the Security Group, while it does restrict the ports, does allow everyone (0.0.0.0/0) to _hit_ those ports.
+
 None of the below is inherently destructive, but there is a point where you modify AWS IAM Identity Center's Identity source. If you're in an existing environment and blindly change identity sources, that could be a bad thing. As always, understand what you're running in any of your environments...even if it's just for testing.
 
 # Walkthrough
