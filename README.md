@@ -64,4 +64,10 @@ Back on over to your Keycloak instance, select "Clients" on the left menu, and s
 
 <img src="images/image03.jpg" ></a>
 
+Select "Browse..." on the next screen, and upload your ```aws-metadata.xml``` file.
 
+You can give it a friendly name if you want, otherwise just hit "Save".
+
+Under "Realm settings" on the left menu, scroll all the way to the bottom, right-click "SAML 2.0 Identity Provider Metadat", and save that info locally (e.g. ```keycloak-metadata.xml```)
+
+<img src="images/image04.jpg" ></a>
