@@ -127,3 +127,39 @@ Upon login, you should be redirected to the AWS access portal:
 <img src="images/image09.jpg" ></a>
 
 Click on "AWSReadOnlyAccess" or whatever permission set you've assigned, and away you go!
+
+## Usernames Instead of Emails
+
+If you run into this, or really just want to use usernames (e.g. kfox) instead of emails for Keycloak + AWS, read on...
+
+Back in Keycloak, I've deleted my original user, and recreated it as (don't forget to set the credentials):
+
+<img src="images/image10.jpg" ></a>
+
+In AWS IAM Identity Center, I've recreated my user with a 'kfox' username vs. 'kfox@foxlab.ca':
+
+<img src="images/image11.jpg" ></a>
+
+In Keycloak, select "Client scopes" on the left menu and "Create client scope".
+
+Give it a Name, set the Type to "Default", the Protocol to "SAML" and hit "Save".
+
+<img src="images/image12.jpg" ></a>
+
+On the next page, select the "Mappers" tab.
+
+Click "Configure a new mapper", select "User Attribute Mapper for NameID".
+
+Give it a Name (e.g. "AWS-Username"), set the "Name ID Format" to 'emailAddress' (shown below), set the "User Attribute" to "username" and click "Save":
+
+<img src="images/image13.jpg" ></a>
+
+Click "Clients" on the left menu, select the AWS Client ID, and then cliick the "Client Scopes" tab.
+
+Click "Add client scope" and select the newly created "aws" (or whatever you named it) SAML scope - click "Add -> Default".
+
+<img src="images/image14.jpg" ></a>
+
+Now head back to your AWS Portal sign-in, and you should be able to sign-in using just a username:
+
+<img src="images/image15.jpg" ></a>
