@@ -101,3 +101,6 @@ Over in Keycloak, select "Users" in the left menu, and click "Add user".
 My user was setup as such:
 
 <img src="images/image06.jpg" ></a>
+
+__Note__ that the Username is setup as the email. This isn't required, but since AWS is (by default) expecting the email to be passed along, it's just easier to be consistent (i.e. using email everywhere for _users_).
+
