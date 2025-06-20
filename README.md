@@ -76,16 +76,28 @@ Under "Realm settings" on the left menu, scroll all the way to the bottom, right
 
 Back over to AWS (assuming you didn't close that last screen), click the "Choose file" under "IdP SAML Metadata" and upload the ```keycloak-metadata.xml``` file.
 
-Click "Next", review the details, type "ACCEPT" and click "Change identity source"
+Click "Next", review the details, type "ACCEPT" and click "Change identity source".
 
 ## AWS User Creation
 
 Since Keycloak doesn't support SCIM by default (and I have yet to look into it), we'll need to create our user mappings manually in AWS.
 
-Still in IAM Identity Center, select Users, and click "Add user"
+Still in IAM Identity Center, select Users, and click "Add user".
 
 __Important__: This tripped me up for longer than I'd like to admit. Keycloak will, by default, pass the user email address as the username identity, even if you setup your keycloak users with simple usernames. For example...I created a keycloak user with 'kfox' as the username, and 'kfox@foxlab.ca' as the email. I can authenticate with Keycloak using 'kfox', and even suring the SSO process, I will use 'kfox' to sign-in, but what gets sent over to AWS is 'kfox@foxlab.ca', and AWS expects that to be in the username field. I'll cover how to address this (if you want) below, but it wasn't obvious to me.
 
 So, my user was setup as such:
 
 <img src="images/image05.jpg" ></a>
+
+Click "Next", "Next", and "Add user".
+
+Once the user is added, they'll need some permissions 
+
+## Keycloak User Creation
+
+Over in Keycloak, select "Users" in the left menu, and click "Add user".
+
+My user was setup as such:
+
+<img src="images/image06.jpg" ></a>
