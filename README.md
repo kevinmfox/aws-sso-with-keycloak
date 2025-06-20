@@ -122,3 +122,8 @@ You should get redirected to Keycloak's login screen:
 
 <img src="images/image08.jpg" ></a>
 
+Upon login, you should be redirected to the AWS access portal:
+
+<img src="images/image09.jpg" ></a>
+
+Click on "AWSReadOnlyAccess" or whatever permission set you've assigned, and away you go!
