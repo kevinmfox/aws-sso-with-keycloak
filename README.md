@@ -92,7 +92,9 @@ So, my user was setup as such:
 
 Click "Next", "Next", and "Add user".
 
-Once the user is added, they'll need some permissions 
+Once the user is added, they'll need some permissions. If you're using AWS Organizations, there's a good chance some pre-defined permissions have already been created for you. If not, you can easily create one from a template. Quickest way to check would be to Click "Permission sets" within IAM Identity Center - if you see items in there, great. If not, click "Create permission set", select "Predefined permission set", and I'd select "ReadOnlyAccess" (for testing) and click "Next", "Next", and "Create".
+
+Click "AWS Accounts" within IAM Identity Center, select (check box) an account, and click "Assign users or groups". Select the user you created, click "Next". On the Permission sets screen, select an available permission set, click "Next", and click "Submit".
 
 ## Keycloak User Creation
 
@@ -102,5 +104,21 @@ My user was setup as such:
 
 <img src="images/image06.jpg" ></a>
 
-__Note__ that the Username is setup as the email. This isn't required, but since AWS is (by default) expecting the email to be passed along, it's just easier to be consistent (i.e. using email everywhere for _users_).
+__Note__ that the Username is setup as the email (vs. 'kfox'). This isn't required, but since AWS is (by default) expecting the email to be passed along, it's just easier to be consistent (i.e. using email everywhere for _users_).
+
+Click "Create".
+
+On the next screen, you'll need to give this user credentials. Click "Credentials", click "Set password", give the user a password and turn "Temporary" off to make life eaiser for testing. Click "Save".
+
+<img src="images/image07.jpg" ></a>
+
+Log out of Keycloak (to avoid issues during the SSO process).
+
+## Test It!
+
+On the Dashboard of your AWS IAM Identity Center page, you should see an "AWS access portal URL". Give that a shot. Just note that if you're running Chrome and didn't deploy a valid (non-staging) SSL certificate, you'll want to run that incognito.
+
+You should get redirected to Keycloak's login screen:
+
+<img src="images/image08.jpg" ></a>
 
