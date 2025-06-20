@@ -1,9 +1,9 @@
 # Overview
 I wanted to have an Identity Provider that I could _spin up_ relatively quickly - so, Keycloak (https://www.keycloak.org/)
 
-Additionally, I work/play a lot with AWS, and didn't find a lot of documentation on how to get Keycloak () properly working with AWS IAM Identity Center.
+Additionally, I work/play a lot with AWS, and didn't find a lot of documentation on how to get Keycloak properly working with AWS IAM Identity Center.
 
-This repo gives a rundown on how to deploy a Keycloak server into an AWS account. And, will also cover how to configure the AWS Identity Center side as well as the Keycloak side to allow SSO for your Keycloak users.
+This repo gives a rundown on how to deploy a Keycloak server into an AWS account and will also cover how to configure the AWS Identity Center side as well as the Keycloak side to allow SSO for your Keycloak users.
 
 ## Requirements
 
@@ -44,3 +44,6 @@ Once the site's up, log in using ```admin``` and ```password``` (assuming you di
 
 Log into your AWS account, and head on over to "IAM Identity Center".
 
+If you haven't yet enabled Identity Center, there are some things to consider - go here https://docs.aws.amazon.com/singlesignon/latest/userguide/identity-center-prerequisites.html
+
+<img src="images/image01.jpg" height=25% width=25% ></a>
