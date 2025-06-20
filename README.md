@@ -44,6 +44,14 @@ Once the site's up, log in using ```admin``` and ```password``` (assuming you di
 
 Log into your AWS account, and head on over to "IAM Identity Center".
 
-If you haven't yet enabled Identity Center, there are some things to consider - go here https://docs.aws.amazon.com/singlesignon/latest/userguide/identity-center-prerequisites.html
+If you haven't yet enabled Identity Center, it will look like this:
 
 <img src="images/image01.jpg" height=25% width=25% ></a>
+
+ There are some things to consider when enabling Identity Center. Nothing _earth shattering_, but it does shift a few things around: https://docs.aws.amazon.com/singlesignon/latest/userguide/identity-center-prerequisites.html
+
+ Assuming Identity Center is enabled, head on over to "Settings" and select "Change identity source" under "Actions":
+
+ <img src="images/image02.jpg" height=25% width=25% ></a>
+
+ 
