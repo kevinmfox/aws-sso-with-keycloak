@@ -85,3 +85,7 @@ Since Keycloak doesn't support SCIM by default (and I have yet to look into it),
 Still in IAM Identity Center, select Users, and click "Add user"
 
 __Important__: This tripped me up for longer than I'd like to admit. Keycloak will, by default, pass the user email address as the username identity, even if you setup your keycloak users with simple usernames. For example...I created a keycloak user with 'kfox' as the username, and 'kfox@foxlab.ca' as the email. I can authenticate with Keycloak using 'kfox', and even suring the SSO process, I will use 'kfox' to sign-in, but what gets sent over to AWS is 'kfox@foxlab.ca', and AWS expects that to be in the username field. I'll cover how to address this (if you want) below, but it wasn't obvious to me.
+
+So, my user was setup as such:
+
+<img src="images/image05.jpg" ></a>
