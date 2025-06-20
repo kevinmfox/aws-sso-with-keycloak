@@ -38,3 +38,4 @@ If you're a Chrome user and you ran certbot in staging mode, you'll need to use 
 
 Once the site's up, log in using ```admin``` and ```password``` (assuming you didn't modify that).
 
+## AWS Identity Center Setup & User Creation
