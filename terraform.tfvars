@@ -1,12 +1,12 @@
 aws_region                  = "us-east-1"
 availability_zone           = "us-east-1a"
-dns_zone                    = "your-dns.ca"                 # change to your dns zone (e.g. example.com)
+# dns_zone                    = "your-dns.ca"                 # change to your dns zone (e.g. example.com)
 vpc_cidr_block              = "10.20.0.0/16"
 subnet_cidr                 = "10.20.1.0/24"
 keycloak_private_ip         = "10.20.1.15"
-server_name                 = "keycloak"
+server_name                 = "keycloak3"
 ami_id                      = "ami-020cba7c55df1f615"       # Needs to be Ubuntu 24.04 - you'll need to change this depending on your region
 instance_type               = "t2.small"
 instance_key                = "test-key"                    # set this to a valid IAM Key Pair name
-certbot_staging             = false                         # set to 'true' if you want trusted certs; if you're testing a lot, set to false so you don't trip Let's Encrypt throttling
-certbot_email               = "your_email@example.com"      # specify an email Let's Encrypt (certbot) can contact you on
+certbot_staging             = false                         # set to 'false' if you want trusted certs; if you're testing a lot, set to true so you don't trip Let's Encrypt throttling
+# certbot_email               = "your_email@example.com"      # specify an email Let's Encrypt (certbot) can contact you on
